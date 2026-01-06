@@ -5,15 +5,16 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #f4f6f8;
     color: #000000;
     line-height: 1.6;
 }
 
+
 /* todo lo del hero es del HEADER */
 .hero{
-    background-color: rgb(120, 146, 179);
+    background-color: #1c1d21;
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -36,9 +37,11 @@ body {
 
 .btn{
     font-size: 22px;
+    width: 100%;
     font-weight: bolder;
     color: rgb(0, 0, 0);
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: rgb(255, 255, 255);
@@ -46,17 +49,20 @@ body {
     border-radius: 10px;
     transition: all 0.8s ease;
     margin-right: 50px;
+    align-items: center;
+    
 }
 
+@media (min-width: 769px) {
 .btn:hover {
     color: #ffffff;
-    background-color:rgb(120, 146, 179) ;
+    background-color:#1c1d21 ;
     border: 1px solid rgb(255, 255, 255);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     transform: translateY(-3px);
     transition: all 0.8s ease;
 
-
+}
 }
 
 section { 
@@ -71,17 +77,18 @@ section {
 .project-card {
     transition: all 0.3s ease;
 }
+
 .project-card:hover {
     color: #ffffff;
-    background-color: rgb(120, 146, 179);
+    background-color: #1c1d21;
     margin: auto;
     padding: 20px;;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     transform: translateY(-3px);
     transition: all 0.5s ease;
-
 }
+
 
 
 
@@ -124,7 +131,7 @@ section p {
     margin-top: 10px;
     font-size: 0.9em;
     font-weight: bold;
-    color: rgb(160, 156, 156);
+    color: #1c1d21;
     margin-bottom: 20px;
 }
 
@@ -133,7 +140,7 @@ footer {
     color: white;
     font-weight: normal;
     text-align: center;
-    background-color: rgb(120, 146, 179);
+    background-color: #1c1d21;
 }
 
 .project-card img { 
@@ -143,14 +150,62 @@ footer {
     opacity: 0;
     align-self: center;
 
-
 }
 
-.project-card:hover article img{
-    width: 600px;
-    height: 600px;
+/* RESPONSIVE telf */
+.project-card img {
+    width: 100%;
+    height: auto;
     opacity: 1;
-    object-fit: cover;
-    transition: all 0.7s ease;
-    
+    margin-top: 15px;
+    border-radius: 8px;
+    display: block;
 }
+@media (max-width: 768px) {
+.project-card {
+    color: #ffffff;
+    background-color: #1c1d21;
+    margin: auto;
+    padding: 20px;;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    margin-top: 20px;
+}
+}
+
+/* RESPONSIVE pc */
+@media (min-width: 769px) {
+
+.project-card img {
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+
+.project-card:hover article img {
+        width: 600px;
+        height: 600px;
+        opacity: 1;
+        transition: all 0.6s ease;
+    }
+}
+
+@media (min-width: 769px) {
+
+
+    .btn {
+    font-size: 22px;
+    width: auto;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.8s ease;
+    align-items: center;
+    }
+}
+
+
